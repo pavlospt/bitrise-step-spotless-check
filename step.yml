@@ -1,12 +1,12 @@
 title: |-
-  Android Detekt
+  Spotless Check
 summary: |
-  This step runs detekt gradle task on your project.
+  This step runs spotlessCheck task on your project.
 description: |
-  This step runs detekt gradle task on your project.
-website: https://github.com/dzinek/bitrise-step-android-detekt
-source_code_url: https://github.com/dzinek/bitrise-step-android-detekt
-support_url: https://github.com/dzinek/bitrise-step-android-detekt/issues
+  This step runs spotlessCheck task on your project.
+website: https://github.com/pavlospt/bitrise-step-spotless-check
+source_code_url: https://github.com/pavlospt/bitrise-step-spotless-check
+support_url: https://github.com/pavlospt/bitrise-step-spotless-check/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
@@ -28,8 +28,7 @@ deps:
 
 toolkit:
   go:
-    package_name: github.com/dzinek/bitrise-step-android-detekt
-
+    package_name: github.com/pavlospt/bitrise-step-spotless-check
 
 inputs:
   - project_location: $BITRISE_SOURCE_DIR
@@ -46,15 +45,6 @@ inputs:
       description: |
         Set the module that you want to run detekt. To see your available modules please open your project in Android Studio and go in [Project Structure] and see the list on the left.
       is_required: false
-  - report_path_pattern: "*/build/reports/detekt/detekt*.html"
-    opts:
-      category: Options
-      title: Report location pattern
-      summary: |
-        Will find the report file with the given pattern. If you need the xml file then you can use: "*/build/reports/detekt/detekt*.xml"
-      description: |
-        Will find the report file with the given pattern. If you need the xml file then you can use: "*/build/reports/detekt/detekt*.xml"
-      is_required: true
   - cache_level: "only_deps"
     opts:
       category: Options

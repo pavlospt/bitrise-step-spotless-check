@@ -1,6 +1,6 @@
 # Android Detekt
 
-This step runs detekt gradle task on your project, using configuration from your Gradle files.
+This step runs Spotless check on your project, using configuration from your Gradle files.
 
 Based on [bitrise-steplib/bitrise-step-android-lint](https://github.com/bitrise-steplib/bitrise-step-android-lint)
 
